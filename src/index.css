@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  
+  --color-brand-primary: #ffffff;
+  --color-brand-secondary: #94a3b8;
+  --color-surface-dark: #000000;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-white bg-black antialiased h-full overflow-x-hidden;
+  }
+}
+
+/* Immersive background */
+.bg-immersive {
+  background: radial-gradient(circle at 20% 20%, #1e3a8a 0%, #000 70%), 
+              radial-gradient(circle at 80% 80%, #1e40af 0%, #000 100%);
+}
+
+.glass-dark {
+  @apply bg-black/40 backdrop-blur-xl border border-white/10;
+}
+
+.glass-light {
+  @apply bg-white/10 backdrop-blur-2xl border border-white/20;
+}
+
+.logo-gradient {
+  background: linear-gradient(to bottom, #fff 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
